@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {splitIntoWords} from "./01-hello-tests/01";
+import {sum} from "./03-functions/03-functions";
+
+let a = sum(1, 2);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
