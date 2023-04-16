@@ -3,17 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {splitIntoWords} from "./01-hello-tests/01";
-import {sum} from "./03-functions/03-functions";
-
-let a = sum(1, 2);
+import {User} from "./06-callBack/06-callBack";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <User />
   </React.StrictMode>
 );
 
