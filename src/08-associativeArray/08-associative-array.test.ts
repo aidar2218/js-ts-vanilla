@@ -2,8 +2,7 @@ type UsersType = {
     [key: string]: {id: number, name: string}
 }
 
-let users: UsersType = {
-}
+let users: UsersType;
 
 beforeEach(() => {
     users = {
@@ -15,7 +14,7 @@ beforeEach(() => {
 })
 
 test("should update corresponding user from obj", () => {
-    users["2"].name = "Ekaterina"
+    delete users["2"];
 
-    expect(users["2"].name).toBe("Ekaterina");
+    expect(users["2"]).toBeUndefined();
 })

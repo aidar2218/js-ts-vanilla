@@ -1,5 +1,3 @@
-
-
 export const usersObj = {
     "0": "Dimych",
     "1": "Natasha",
@@ -19,7 +17,6 @@ export const users: UsersType = {
 }
 // users[1]
 let user = {id: 100500, name: "Igor"}
-
 users[user.id] = user;
 delete users[user.id];
 users[user.id].name = "Vitya";
