@@ -1,55 +1,56 @@
-type LocalCityType = {
-    title: string
-    countryTitle: string
-}
-
 type AddressType = {
-    streetTitle: string
+    street: string
     city: LocalCityType
 }
 
-type TechnologiesType = {
-    id: number
+type LocalCityType = {
     title: string
+    country: string
 }
 
-export type StudentType = {
+type TechType = {
+    id: number
+    skill: string
+}
+
+type StudentType = {
     id: number
     name: string
     age: number
     isActive: boolean
     address: AddressType
-    technologies: Array<TechnologiesType>
+    technologies: TechType[]
 }
 
-
-
-export const student: StudentType = {
+const student: StudentType = {
     id: 1,
     name: "Aidar",
-    age: 32,
+    age: 23,
     isActive: true,
     address: {
-        streetTitle: "1-mcr",
+        street: "1-mkr",
         city: {
-            title: "Bishkek",
-            countryTitle: "Kyrgyz Republic"
+            title: "Tokmok",
+            country: "Kyrgyzstan"
         }
     },
     technologies: [
         {
             id: 1,
-            title: "HTML"
+            skill: "HTML"
         },
         {
             id: 2,
-            title: "JS"
+            skill: "CSS"
         },
         {
             id: 3,
-            title: "React"
+            skill: "JS"
         },
+        {
+            id: 4,
+            skill: "REACT"
+        }
     ]
-}
+};
 
-console.log(student.technologies[2].title);
