@@ -1,29 +1,52 @@
-const ages = [22, 18, 91, 34, 100, 44];
+const ages = [22, 84, 34, 22, 35, 56, 72, 63];
 
 const predicate = (age: number) => {
-    return age > 90;
+    return age > 65;
 }
 
+const oldAges = [72, 84]; // > 65
 
-const oldAges = [100];
 
-type CourseType = {
+export type CourseType = {
     title: string
     price: number
 }
 
-const courses = [
-    {title: "css", price: 110},
-    {title: "js", price: 200},
-    {title: "react", price: 150}
+const courses: CourseType[] = [
+    {
+        title: "html&css",
+        price: 50
+    },
+    {
+        title: "js",
+        price: 110
+    },
+    {
+        title: "react",
+        price: 200
+    },
+    {
+        title: "nodejs",
+        price: 250
+    }
 ];
 
-
-const chipPredicate = (course: CourseType) => {
-    return course.price < 160;
+const cheapPredicate = (c: CourseType) => {
+    return c.price < 220;
 }
 
-const chipCourses = [
-    {title: "css", price: 110},
-    {title: "react", price: 150}
+const cheapCourses = [
+    {
+        title: "html&css",
+        price: 50
+    },
+    {
+        title: "js",
+        price: 110
+    },
+    {
+        title: "react",
+        price: 200
+    },
 ]
+
